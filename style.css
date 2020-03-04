@@ -1,6 +1,6 @@
 * {
     background-color: black;
-
+    box-sizing: border-box;
 }
 
 .wrapper {
@@ -8,7 +8,7 @@
     display: grid;
     grid-gap: 3px;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 40px 100px 40px; /* change to auto */ 
+    grid-template-rows: 40px auto 40px; /* change to auto */ 
     grid-template-areas: 
         "h h h h h h h h h h h h"
         "m m m m m m m m m m m m"
@@ -24,6 +24,33 @@ main {
     grid-area: m;
     background-color: yellow;
 }
+
+.hero {
+    background-color: yellow;
+    height: 100vh;
+    background-image: url('/images/hero.jpg');
+    background-size: cover;
+    background-position: 0 60%;
+    position: relative;
+}
+
+.hero-heading, .hero-tag {
+    background: white;
+    opacity: 0.5;
+    display: inline-block;
+    position: absolute; 
+    left: 50%;
+    transform: translate(-50%, -50%); 
+}
+
+.hero-heading {
+    top: 50%;
+}
+
+.hero-tag {
+    top: 60%;
+}
+
 
 footer {
     grid-area: f;
