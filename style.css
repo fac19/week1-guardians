@@ -1,0 +1,31 @@
+* {
+    background-color: black;
+
+}
+
+.wrapper {
+    height: 100%;
+    display: grid;
+    grid-gap: 3px;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 40px 100px 40px; /* change to auto */ 
+    grid-template-areas: 
+        "h h h h h h h h h h h h"
+        "m m m m m m m m m m m m"
+        "f f f f f f f f f f f f";
+}
+
+header {
+    grid-area: h;
+    background-color: blue;
+}
+
+main {
+    grid-area: m;
+    background-color: yellow;
+}
+
+footer {
+    grid-area: f;
+    background-color: green;
+}
