@@ -42,7 +42,7 @@ main {
 
 .hero {
     height: 100vh;
-    background-image: url('images/hero.jpg');
+    background-image: url('week1-guardians/images/hero.jpg');
     background-size: cover;
     background-position:  60%;
     position: relative;
