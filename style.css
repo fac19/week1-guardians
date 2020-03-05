@@ -78,14 +78,16 @@ footer {
     background-color: green;
 }
 
-/*-------Styling for navigation-------*/
+/*
+
+
 nav .nav-links {
     background-color: powderblue;
 }
 
-nav .nav-links.toggle-on {
+ nav .nav-links.toggle-on {
     position: relative;
-}
+} 
 
 .nav-links a {
     display: flex;
@@ -100,7 +102,7 @@ nav .nav-links.toggle-on {
     position: fixed;
     box-sizing: border-box;
     margin: 0.2rem;
-    color: white; /*to be changed to another color*/
+    color: white; 
     font-size: 3rem;
     transition: 1s;
 
@@ -108,25 +110,25 @@ nav .nav-links.toggle-on {
 
 #hamburger-icon:hover {
     transform: scale(1.1);
-    color: red; /*to be changed to another color*/
+    color: red; 
 }
-/*------- End -------*/ 
 
-
-/*-------Nav Mobile/Tablet -------*/
 @media screen and (max-width: 750px){
-    .nav-links {
-        visibility: hidden;
+    .nav-links a {
+        display: none; 
     }
 
-    .nav-links.toggle-on{
-        visibility: visible;
+
+    .nav-links #hamburger-icon{
+        display: flex;
+        position: fixed;
+        top: 0;
+        left: 0;
+        flex-direction: column;
     }
 
 }
-/*-------End -------*/
 
-/*-------Nav Desktop -------*/
 @media screen and (min-width: 749px){
     .nav-links{
         display: flex;
@@ -136,5 +138,62 @@ nav .nav-links.toggle-on {
         display: none;
     }
 }
-/*-------End --------*/
+*/
+
+/*-------Styling for navigation-------*/
+.nav-links {
+    background-color: powderblue;
+}
+
+.nav-links a {
+    display: flex;
+    text-decoration: none;
+    list-style-type: none;
+    flex-direction: row;
+    color: purple;
+    text-align: center;
+}
+
+.nav-links #hamburger-icon{
+    display: none;
+}
+/*------- End -------*/ 
+
+
+/*-------Media -------*/
+@media screen and (max-width: 750px){
+    .nav-links a {
+        display: none; 
+    }
+
+
+    .nav-links #hamburger-icon{
+        display: flex;
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+
+}
+
+
+@media screen and (max-width: 705px) {
+    .nav-links.toggle-on {
+        position: relative;
+    }
+
+    .nav-links.nav-links.toggle-on a#hamburger-icon {
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+
+    .nav-links.toggle-on a {
+        display: flex;
+        flex-direction: column;
+    }
+}
+/*------- End -------*/ 
+
+
 
