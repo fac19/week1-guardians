@@ -1,6 +1,6 @@
 * {
     --bgColor: hsla(0, 0%, var(--lightness, 99%), var(--opacity, 1));
-    --primaryColor: hsla(204, 93%, 11%, 1);
+    --primaryColor: hsla(204, 93%, var(--lightness, 11%), 1);
     --secondaryColor: hsla(200, var(--saturation, 100%), 60%, 1);
 
     box-sizing: border-box;
@@ -73,6 +73,16 @@ main {
     bottom: 10%;
 }
 
+.person-card {
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.person-card img {
+    max-width: 100%;
+    border-radius: 50%;
+}
+
 footer {
     grid-area: f;
     background-color: green;
@@ -94,8 +104,31 @@ nav li {
    
 }
 
-@media and (max-width: 750px){
+.person-card h3 {
+    text-align: center;
+}
+
+.profile-icons {
+    margin: 10px auto;
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    color: var(--primaryColor);
+}
+
+.hoverable-icon:hover {
+    --lightness: 50%;
+    color: var(--primaryColor);
+    cursor: pointer;
+}
+
+@media only screen and (min-width: 750px){
     .nav-links{
         display: none;
+    }
+
+    .about-us {
+        display: grid;
+        grid-template: repeat(2, auto) / repeat(2, 1fr);
     }
 }
