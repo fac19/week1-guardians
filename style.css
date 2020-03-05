@@ -8,10 +8,13 @@
 
     scroll-behavior: smooth;
 }
+body {
+    background-color: var(--bgColor);
+}
 
 section {
     background-color: var(--bgColor);
-    margin-top: 10vh;
+    margin-top: 5vh;
 }
 
 .wrapper {
@@ -88,7 +91,7 @@ main {
 
 footer {
     grid-area: f;
-    background-color: green;
+    background-color: var(--primaryColor);
 }
 
 /*Styling for navigation*/
@@ -107,8 +110,14 @@ nav li {
    
 }
 
+.about-us h2 {
+    text-align: center;
+    font-size: 2.25rem;
+}
+
 .person-card {
     color: var(--primaryColor);
+    margin-bottom: 7vh;
 }
 
 .person-card h3 {
@@ -135,8 +144,59 @@ nav li {
 .hoverable-icon:hover {
     --lightness: 50%;
     color: var(--primaryColor);
-    cursor: pointer;
+    cursor: pointer;    
 }
+
+form {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    /* padding: 5vw; */
+    margin: 0;
+}
+
+form h2 {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+input, button {
+    margin: 0 auto;
+    margin-bottom: 3vh;
+    width: 50vw;
+}
+
+button {
+    border: none;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    background: var(--primaryColor);
+    color: var(--bgColor);
+    font-family: lato, sans-serif;
+    font-size: 1.5rem;
+    cursor: pointer;
+    text-align: center;
+    transition: background 250ms ease-in-out, 
+                transform 150ms ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+button:hover,
+button:focus {
+    background: var(--secondaryColor);
+}
+
+button:focus {
+    outline: 1px solid #fff;
+    outline-offset: -4px;
+}
+
+button:active {
+    transform: scale(0.99);
+}
+
+
 
 @media only screen and (min-width: 750px){
     .nav-links{
@@ -145,6 +205,11 @@ nav li {
 
     .about-us {
         display: grid;
-        grid-template: repeat(2, auto) / repeat(2, 1fr);
+        grid-template: repeat(3, auto) / repeat(2, 1fr);
     }
+
+    .about-us-heading {
+        grid-column: 1 / -1;
+    }
+
 }
