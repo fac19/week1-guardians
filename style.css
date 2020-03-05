@@ -1,7 +1,4 @@
-* {
-    background-color: black;
 
-}
 
 .wrapper {
     height: 100%;
@@ -32,13 +29,21 @@ footer {
 }
 
 /*-------Styling for navigation-------*/
-.nav-links {
+nav .nav-links {
+    background-color: powderblue;
+}
+
+nav .nav-links.toggle-on {
+    position: relative;
+}
+
+.nav-links a {
+    display: flex;
     text-decoration: none;
     list-style-type: none;
-    display: flex;
-    justify-content: space-around ;
-    align-content: space-between;
-    color: white; /*to be changed to another color*/
+    flex-direction: row;
+    color: purple;
+    text-align: center;
 }
 
 #hamburger-icon {
@@ -58,20 +63,21 @@ footer {
 /*------- End -------*/ 
 
 
-/*-------Nav Mobile -------*/
-@media (max-width: 750px){
-    .nav-links{
-        display: none;
+/*-------Nav Mobile/Tablet -------*/
+@media screen and (max-width: 750px){
+    .nav-links {
+        visibility: hidden;
     }
 
-    .nav-links.toggle-on {
-        display: block;
+    .nav-links.toggle-on{
+        visibility: visible;
     }
+
 }
 /*-------End -------*/
 
 /*-------Nav Desktop -------*/
-@media (min-width: 749px){
+@media screen and (min-width: 749px){
     .nav-links{
         display: flex;
     }

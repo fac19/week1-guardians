@@ -1,8 +1,12 @@
 // Nav JS
-function navToggle() {
-    var getNav = document.querySelector(".nav-links");
-    getNav.classList.toggle("toggle-on");
+function showNav() {
+    var navLinks = document.querySelector("#nav-links-id");
+    if (navLinks.classList === "nav-links") {
+        navLinks.className += "toggle-on";
+    }else {
+        navLinks.className = "nav-links"
+    }
 }
 
 let getHamburger = document.querySelector(".hamburger-icon-container");
-getHamburger.addEventListener("click", navToggle);
+getHamburger.addEventListener("click", showNav);
