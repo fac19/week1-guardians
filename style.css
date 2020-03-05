@@ -78,68 +78,6 @@ footer {
     background-color: green;
 }
 
-/*
-
-
-nav .nav-links {
-    background-color: powderblue;
-}
-
- nav .nav-links.toggle-on {
-    position: relative;
-} 
-
-.nav-links a {
-    display: flex;
-    text-decoration: none;
-    list-style-type: none;
-    flex-direction: row;
-    color: purple;
-    text-align: center;
-}
-
-#hamburger-icon {
-    position: fixed;
-    box-sizing: border-box;
-    margin: 0.2rem;
-    color: white; 
-    font-size: 3rem;
-    transition: 1s;
-
-}
-
-#hamburger-icon:hover {
-    transform: scale(1.1);
-    color: red; 
-}
-
-@media screen and (max-width: 750px){
-    .nav-links a {
-        display: none; 
-    }
-
-
-    .nav-links #hamburger-icon{
-        display: flex;
-        position: fixed;
-        top: 0;
-        left: 0;
-        flex-direction: column;
-    }
-
-}
-
-@media screen and (min-width: 749px){
-    .nav-links{
-        display: flex;
-    }
-
-    #hamburger-icon {
-        display: none;
-    }
-}
-*/
-
 /*-------Styling for navigation-------*/
 .nav-links {
     display: flex;
@@ -185,7 +123,7 @@ nav .nav-links {
 @media screen and (max-width: 750px) {
     .nav-links.toggle-on {
         position: relative;
-        display: inline-flexbox;
+        display: inline-flex;
         flex-direction: column;
     }
 
@@ -194,11 +132,7 @@ nav .nav-links {
         top: 0;
         left: 0;
     }
-
-    /* .nav-links.toggle-on a {
-        display: flex;
-        flex-direction: column;
-    } */
+    
 }
 /*------- End -------*/ 
 

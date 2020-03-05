@@ -8,5 +8,3 @@ function showNav() {
     }
 }
 
-// let getHamburger = document.querySelector(".hamburger-icon-container");
-// getHamburger.addEventListener("click", showNav);
