@@ -142,16 +142,19 @@ nav .nav-links {
 
 /*-------Styling for navigation-------*/
 .nav-links {
-    background-color: powderblue;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: var(--primaryColor);
+    font-size: 2rem;
+    padding-top: 7.5vh;
 }
 
 .nav-links a {
-    display: flex;
     text-decoration: none;
     list-style-type: none;
-    flex-direction: row;
-    color: purple;
     text-align: center;
+    color: var(--bgColor);
 }
 
 .nav-links #hamburger-icon{
@@ -170,28 +173,32 @@ nav .nav-links {
     .nav-links #hamburger-icon{
         display: flex;
         position: fixed;
+        margin-left: 1rem;
         top: 0;
         left: 0;
+        font-size: 5rem;
     }
 
 }
 
 
-@media screen and (max-width: 705px) {
+@media screen and (max-width: 750px) {
     .nav-links.toggle-on {
         position: relative;
+        display: inline-flexbox;
+        flex-direction: column;
     }
 
-    .nav-links.nav-links.toggle-on a#hamburger-icon {
+    .nav-links.toggle-on a#hamburger-icon {
         position: fixed;
         top: 0;
         left: 0;
     }
 
-    .nav-links.toggle-on a {
+    /* .nav-links.toggle-on a {
         display: flex;
         flex-direction: column;
-    }
+    } */
 }
 /*------- End -------*/ 
 
