@@ -1,5 +1,13 @@
 * {
-    background-color: black;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+h1 {
+
+}
+
+h2 {
 
 }
 
@@ -8,7 +16,7 @@
     display: grid;
     grid-gap: 3px;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 20vh 10rem 10vh; /* change to auto */ 
+     grid-template-rows: 20vh auto 10vh; /* main section should be auto :) */ 
     grid-template-areas: 
         "h h h h h h h h h h h h"
         "m m m m m m m m m m m m"
@@ -24,6 +32,44 @@ header {
 main {
     grid-area: m;
     background-color: yellow;
+}
+
+.hero {
+    background-color: yellow;
+    height: 100vh;
+    background-image: url('/images/hero.jpg');
+    background-size: cover;
+    background-position:  60%;
+    position: relative;
+
+    text-align: center;
+}
+
+.hero-heading, .hero-tag {
+    background: white;
+    opacity: 0.5;
+    display: inline-block;
+    position: absolute; 
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    padding: 2%;
+}
+
+.hero-heading {
+    top: 10%;
+    font-size: 2.25rem;
+}
+
+.hero-tag {
+    top: 25%;
+    font-size: 1rem;
+}
+
+.hero .down-arrow {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    bottom: 10%;
 }
 
 footer {
