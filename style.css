@@ -32,6 +32,8 @@ main {
     background-size: cover;
     background-position: 0 60%;
     position: relative;
+
+    text-align: center;
 }
 
 .hero-heading, .hero-tag {
