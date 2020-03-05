@@ -1,14 +1,14 @@
 * {
+    --bgColor: hsla(0, 0%, var(--lightness, 99%), var(--opacity, 1));
+    --primaryColor: hsla(204, 93%, 11%, 1);
+    --secondaryColor: hsla(200, var(--saturation, 100%), 60%, 1);
+
     box-sizing: border-box;
     font-family: 'Lato', sans-serif;
 }
 
-h1 {
-
-}
-
-h2 {
-
+section {
+    background-color: var(--bgColor);
 }
 
 .wrapper {
@@ -25,17 +25,16 @@ h2 {
 
 header {
     grid-area: h;
-    background-color: blue;
+    background-color: var(--primaryColor);
+    color: var(--bgColor);
 
 }
 
 main {
     grid-area: m;
-    background-color: yellow;
 }
 
 .hero {
-    background-color: yellow;
     height: 100vh;
     background-image: url('/images/hero.jpg');
     background-size: cover;
@@ -46,8 +45,8 @@ main {
 }
 
 .hero-heading, .hero-tag {
-    background: white;
-    opacity: 0.5;
+    --opacity: 0.5;
+    background-color: var(--bgColor);
     display: inline-block;
     position: absolute; 
     left: 50%;
@@ -65,7 +64,9 @@ main {
     font-size: 1rem;
 }
 
-.hero .down-arrow {
+.hero .down-arrow {    
+    color: var(--secondaryColor);
+    
     position: absolute;
     left: 50%;
     transform: translate(-50%, -50%);
