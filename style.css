@@ -104,8 +104,17 @@ nav li {
    
 }
 
+.person-card {
+    color: var(--primaryColor);
+}
+
 .person-card h3 {
     text-align: center;
+    font-size: 1.5rem;
+}
+
+.person-card p {
+    font-size: 1rem;
 }
 
 .profile-icons {
