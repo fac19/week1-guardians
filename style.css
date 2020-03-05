@@ -5,10 +5,13 @@
 
     box-sizing: border-box;
     font-family: 'Lato', sans-serif;
+
+    scroll-behavior: smooth;
 }
 
 section {
     background-color: var(--bgColor);
+    margin-top: 10vh;
 }
 
 .wrapper {
@@ -123,6 +126,10 @@ nav li {
     display: flex;
     justify-content: space-around;
     color: var(--primaryColor);
+}
+
+.profile-icons a {
+    color: inherit;
 }
 
 .hoverable-icon:hover {
