@@ -1,6 +1,14 @@
 * {
-    background-color: black;
     box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+h1 {
+
+}
+
+h2 {
+
 }
 
 .wrapper {
@@ -31,7 +39,7 @@ main {
     height: 100vh;
     background-image: url('/images/hero.jpg');
     background-size: cover;
-    background-position: 0 60%;
+    background-position:  60%;
     position: relative;
 
     text-align: center;
@@ -44,16 +52,25 @@ main {
     position: absolute; 
     left: 50%;
     transform: translate(-50%, -50%); 
+    padding: 2%;
 }
 
 .hero-heading {
-    top: 50%;
+    top: 10%;
+    font-size: 2.25rem;
 }
 
 .hero-tag {
-    top: 60%;
+    top: 25%;
+    font-size: 1rem;
 }
 
+.hero .down-arrow {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    bottom: 10%;
+}
 
 footer {
     grid-area: f;
