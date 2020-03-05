@@ -69,7 +69,7 @@
         </article>
       </section>
       <section class="contact-form" aria-label="form">
-        <form action="">
+        <form action="https://nonexistantwebsite.com">
           <h2>Say hello!</h2>
           <label for="company-name">Company Name:</label>
           <input type="text" id="company-name" class="text-input" name="company-name">
@@ -80,7 +80,7 @@
           <label for="tel">Telephone Number:</label>
           <input type="number" id="tel" class="text-input" name="tel">
 
-          <button type="submit">Submit</button>
+          <button id='form-submit' type="submit" disabled>Submit</button>
         </form> 
       </section>
     </main>
@@ -91,7 +91,21 @@
 
   </div>
 
+  <script>
+    let submit = document.getElementById('form-submit');
+    let formElements = Array.from(document.querySelector('form').children);
+    let inputElements = formElements.filter(element => element.tagName === 'INPUT'); 
+    document.addEventListener('keyup', () => {           
+      if(inputElements.every(input => input.value)) {
+        submit.disabled = false;
+      } else {
+        submit.disabled = true;
+      }
+    })
+  </script>
+
   <script src="script.js"></script>
+
   
 </body>
 </html>
