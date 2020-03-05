@@ -31,24 +31,54 @@ footer {
     background-color: green;
 }
 
-/*Styling for navigation*/
-nav li {
-    color: white;
-    list-style-type: none;
-    
-}
-
+/*-------Styling for navigation-------*/
 .nav-links {
     text-decoration: none;
-}
-
-.hamburger-menu {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around ;
+    align-content: space-between;
     color: white; /*to be changed to another color*/
-   
 }
 
-@media and (max-width: 750px){
+#hamburger-icon {
+    position: fixed;
+    box-sizing: border-box;
+    margin: 0.2rem;
+    color: white; /*to be changed to another color*/
+    font-size: 3rem;
+    transition: 1s;
+
+}
+
+#hamburger-icon:hover {
+    transform: scale(1.1);
+    color: red; /*to be changed to another color*/
+}
+/*------- End -------*/ 
+
+
+/*-------Nav Mobile -------*/
+@media (max-width: 750px){
     .nav-links{
         display: none;
     }
+
+    .nav-links.toggle-on {
+        display: block;
+    }
 }
+/*-------End -------*/
+
+/*-------Nav Desktop -------*/
+@media (min-width: 749px){
+    .nav-links{
+        display: flex;
+    }
+
+    #hamburger-icon {
+        display: none;
+    }
+}
+/*-------End --------*/
+
