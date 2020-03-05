@@ -1,11 +1,22 @@
+* {
+    --bgColor: hsla(0, 0%, var(--lightness, 99%), var(--opacity, 1));
+    --primaryColor: hsla(204, 93%, 11%, 1);
+    --secondaryColor: hsla(200, var(--saturation, 100%), 60%, 1);
 
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+section {
+    background-color: var(--bgColor);
+}
 
 .wrapper {
     height: 100%;
     display: grid;
     grid-gap: 3px;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 20vh 10rem 10vh; /* change to auto */ 
+     grid-template-rows: 20vh auto 10vh; /* main section should be auto :) */ 
     grid-template-areas: 
         "h h h h h h h h h h h h"
         "m m m m m m m m m m m m"
@@ -14,13 +25,52 @@
 
 header {
     grid-area: h;
-    background-color: blue;
+    background-color: var(--primaryColor);
+    color: var(--bgColor);
 
 }
 
 main {
     grid-area: m;
-    background-color: yellow;
+}
+
+.hero {
+    height: 100vh;
+    background-image: url('/images/hero.jpg');
+    background-size: cover;
+    background-position:  60%;
+    position: relative;
+
+    text-align: center;
+}
+
+.hero-heading, .hero-tag {
+    --opacity: 0.5;
+    background-color: var(--bgColor);
+    display: inline-block;
+    position: absolute; 
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    padding: 2%;
+}
+
+.hero-heading {
+    top: 10%;
+    font-size: 2.25rem;
+}
+
+.hero-tag {
+    top: 25%;
+    font-size: 1rem;
+}
+
+.hero .down-arrow {    
+    color: var(--secondaryColor);
+    
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    bottom: 10%;
 }
 
 footer {
