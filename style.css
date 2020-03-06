@@ -2,12 +2,11 @@
     --bgColor: hsla(0, 0%, var(--lightness, 99%), var(--opacity, 1));
     --primaryColor: hsla(204, 93%, var(--lightness, 11%), 1);
     --secondaryColor: hsla(200, var(--saturation, 100%), 60%, 1);
-
     box-sizing: border-box;
     font-family: 'Lato', sans-serif;
-
     scroll-behavior: smooth;
 }
+
 body {
     background-color: var(--bgColor);
 }
@@ -33,7 +32,6 @@ header {
     grid-area: h;
     background-color: var(--primaryColor);
     color: var(--bgColor);
-
 }
 
 main {
@@ -42,11 +40,10 @@ main {
 
 .hero {
     height: 100vh;
-    background-image: url('/week1-guardians/images/hero.jpg');
+    background-image: url('/images/hero.jpg');
     background-size: cover;
     background-position:  60%;
     position: relative;
-
     text-align: center;
 }
 
@@ -71,8 +68,7 @@ main {
 }
 
 .hero .down-arrow {    
-    color: var(--secondaryColor);
-    
+    color: var(--secondaryColor);    
     position: absolute;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -97,8 +93,7 @@ footer {
 /*Styling for navigation*/
 nav li {
     color: white;
-    list-style-type: none;
-    
+    list-style-type: none;    
 }
 
 .nav-links {
@@ -106,8 +101,7 @@ nav li {
 }
 
 .hamburger-menu {
-    color: white; /*to be changed to another color*/
-   
+    color: white; /*to be changed to another color*/   
 }
 
 .about-us h2 {
@@ -151,7 +145,6 @@ form {
     display: flex;
     flex-direction: column;
     text-align: center;
-    /* padding: 5vw; */
     margin: 0;
 }
 
@@ -196,8 +189,6 @@ button:active {
     transform: scale(0.99);
 }
 
-
-
 @media only screen and (min-width: 750px){
     .nav-links{
         display: none;
@@ -211,5 +202,4 @@ button:active {
     .about-us-heading {
         grid-column: 1 / -1;
     }
-
 }
