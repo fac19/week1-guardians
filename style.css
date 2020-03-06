@@ -19,7 +19,6 @@ section {
 .wrapper {
     height: 100%;
     display: grid;
-    grid-gap: 3px;
     grid-template-columns: repeat(12, 1fr);
      grid-template-rows: 20vh auto 10vh; /* main section should be auto :) */ 
     grid-template-areas: 
@@ -39,12 +38,13 @@ main {
 }
 
 .hero {
-    height: 100vh;
+    height: 80vh;
     background-image: url('/images/hero.jpg');
     background-size: cover;
     background-position:  60%;
     position: relative;
     text-align: center;
+    margin-top: 0;
 }
 
 .hero-heading, .hero-tag {
@@ -72,7 +72,7 @@ main {
     position: absolute;
     left: 50%;
     transform: translate(-50%, -50%);
-    bottom: 10%;
+    bottom: 0%;
 }
 
 .person-card {
